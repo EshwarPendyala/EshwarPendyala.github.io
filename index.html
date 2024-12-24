@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eshwar Pendyala | Software Engineer</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
     <style>
-        /* Reset default styles */
+        /* Reset and Global Styles */
         * {
             margin: 0;
             padding: 0;
@@ -14,161 +18,139 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background: #f8f8f8;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f8f8;
             color: #333;
             line-height: 1.6;
         }
 
-        /* Global Styles */
-        h1, h2, h3, h4 {
-            color: #003366;
-        }
-
-        p {
-            color: #555;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        /* Header */
+        /* Header Section */
         header {
-            background: linear-gradient(135deg, #0066cc, #00bfff);
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
             color: white;
-            text-align: center;
             padding: 100px 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://via.placeholder.com/1500x1000') center center / cover no-repeat;
+            opacity: 0.4;
         }
 
         header h1 {
             font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
+            font-weight: 600;
+            z-index: 2;
         }
 
         header p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
+            z-index: 2;
             font-weight: 300;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #1e3c72;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.1rem;
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
         }
 
         /* About Section */
         section.about {
-            padding: 80px 20px;
-            background: #fff;
-            max-width: 1000px;
-            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
-        section.about h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #0077cc;
+        /* Skills and Achievements Section */
+        section.skills, section.achievements {
+            background-color: #e9f1fb;
+            border-radius: 12px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
-        section.about p {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-            color: #555;
+        /* Technical Skills List */
+        .skills-list, .achievements-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        /* Technical Skills */
-        section.skills {
-            padding: 80px 20px;
-            background: #f1f1f1;
-        }
-
-        section.skills h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #0077cc;
-        }
-
-        .skills-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
-        }
-
-        .skills-list li {
-            background: #fff;
+        .skills-list li, .achievements-list li {
+            background-color: #fff;
             padding: 20px;
+            margin: 15px;
             border-radius: 8px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 250px;
             text-align: center;
-            font-size: 1.1rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .skills-list li:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        .skills-list li:hover, .achievements-list li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
         }
 
-        /* Key Achievements */
-        section.achievements {
-            padding: 80px 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        section.achievements h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #0077cc;
-        }
-
-        section.achievements ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        section.achievements li {
-            background: #fff;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Tools & Methodologies */
+        /* Tools Section */
         section.tools {
-            background: #e6f7ff;
-            padding: 80px 20px;
-        }
-
-        section.tools h2 {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 40px;
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #0077cc;
         }
 
         .tools-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
         }
 
         .tools-list li {
-            background: #fff;
-            padding: 20px;
-            text-align: center;
+            background: #1e3c72;
+            color: #fff;
+            padding: 15px;
             border-radius: 8px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-            font-size: 1.1rem;
+            font-size: 1rem;
+            transition: transform 0.3s ease;
         }
 
-        /* CTA Section */
+        .tools-list li:hover {
+            transform: translateY(-8px);
+        }
+
+        /* Call-to-Action Section */
         section.cta {
-            background: #0066cc;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
+            border-radius: 12px;
+            margin-top: 50px;
         }
 
         section.cta h2 {
@@ -176,31 +158,29 @@
             margin-bottom: 20px;
         }
 
-        section.cta p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-        }
-
         section.cta a {
-            background-color: #fff;
-            color: #0066cc;
-            text-decoration: none;
+            background-color: white;
+            color: #2575fc;
+            font-size: 1.2rem;
             padding: 15px 30px;
             border-radius: 30px;
-            font-size: 1.2rem;
+            text-decoration: none;
             transition: background-color 0.3s ease;
         }
 
         section.cta a:hover {
-            background-color: #00bfff;
+            background-color: #6a11cb;
+            color: white;
         }
 
         /* Footer */
         footer {
-            background-color: #003366;
+            background-color: #2a5298;
             color: white;
             text-align: center;
             padding: 20px;
+            margin-top: 50px;
+            border-radius: 8px;
         }
 
         footer a {
@@ -215,20 +195,16 @@
                 font-size: 2.5rem;
             }
 
-            section.about h2,
-            section.skills h2,
-            section.achievements h2,
-            section.tools h2 {
+            section h2 {
                 font-size: 2rem;
             }
 
-            section.cta h2 {
-                font-size: 2rem;
+            .skills-list li, .achievements-list li {
+                width: 220px;
             }
 
-            .skills-list,
             .tools-list {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             }
         }
 
@@ -237,13 +213,9 @@
                 font-size: 2rem;
             }
 
-            header p {
-                font-size: 1rem;
-            }
-
             section.cta a {
-                padding: 12px 20px;
                 font-size: 1rem;
+                padding: 12px 25px;
             }
         }
     </style>
@@ -251,13 +223,13 @@
 
 <body>
 
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
         <h1>Eshwar Pendyala</h1>
         <p>Software Engineer | Python | Flask | Django | SQL | Cassandra | GitHub | Jira</p>
     </header>
 
-    <!-- About Section -->
+    <!-- About Me Section -->
     <section class="about">
         <h2>🔍 About Me</h2>
         <p>Passionate and results-driven Software Engineer with 3 years of hands-on experience in Python and web development, specializing in Flask and Django frameworks. I thrive on turning complex challenges into elegant, user-friendly solutions. My expertise extends to database management with SQL and Cassandra, and I am well-versed in utilizing collaborative tools such as GitHub, GitLab, and Jira to enhance development workflows.</p>
@@ -282,7 +254,7 @@
     <!-- Key Achievements Section -->
     <section class="achievements">
         <h2>🛠️ Key Achievements</h2>
-        <ul>
+        <ul class="achievements-list">
             <li>Successfully designed and implemented scalable web applications using Flask and Django, enhancing user experience and optimizing performance.</li>
             <li>Proficient in database design, with a focus on SQL and Cassandra, ensuring robust data management and retrieval.</li>
             <li>Collaborated with cross-functional teams using GitHub, GitLab, and Jira to streamline development processes, resulting in increased efficiency and code quality.</li>
