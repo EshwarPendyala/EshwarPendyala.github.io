@@ -1,196 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eshwar's Portfolio</title>
-  <style>
-    /* General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f7f7f7;
-      color: #333;
-      line-height: 1.6;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eshwar Pendyala | Software Engineer</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Header */
-    header {
-      background: linear-gradient(135deg, #2b5876, #4e4376);
-      color: white;
-      padding: 60px 0;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-    header p {
-      font-size: 1.2rem;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
 
-    /* Main Content Section */
-    section {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+        /* Global Styles */
+        h1, h2, h3, h4 {
+            color: #003366;
+        }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #2b5876;
-    }
+        p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
 
-    p {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 20px;
-      line-height: 1.7;
-    }
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0066cc, #00bfff);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
 
-    /* Skill Set Section */
-    .skills, .tools {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 20px;
-    }
-    .skills li, .tools li {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      font-weight: bold;
-      transition: transform 0.3s ease;
-    }
-    .skills li:hover, .tools li:hover {
-      transform: translateY(-10px);
-    }
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
 
-    /* Key Achievements */
-    ul {
-      list-style-type: none;
-      margin-top: 20px;
-    }
-    ul li {
-      background-color: #f9f9f9;
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+        header p {
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
 
-    /* Call to Action Section */
-    .cta {
-      text-align: center;
-      background-color: #2b5876;
-      color: white;
-      padding: 40px;
-      border-radius: 8px;
-      margin-top: 40px;
-    }
-    .cta a {
-      background-color: #f4b400;
-      color: white;
-      text-decoration: none;
-      padding: 15px 25px;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      transition: background-color 0.3s ease;
-    }
-    .cta a:hover {
-      background-color: #f9a800;
-    }
+        /* About Section */
+        section.about {
+            padding: 80px 20px;
+            background: #fff;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
 
-    /* Footer */
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-    footer p {
-      font-size: 0.9rem;
-    }
-  </style>
+        section.about h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #0077cc;
+        }
+
+        section.about p {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Technical Skills */
+        section.skills {
+            padding: 80px 20px;
+            background: #f1f1f1;
+        }
+
+        section.skills h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0077cc;
+        }
+
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .skills-list li {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skills-list li:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Key Achievements */
+        section.achievements {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section.achievements h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0077cc;
+        }
+
+        section.achievements ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        section.achievements li {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Tools & Methodologies */
+        section.tools {
+            background: #e6f7ff;
+            padding: 80px 20px;
+        }
+
+        section.tools h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0077cc;
+        }
+
+        .tools-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 30px;
+        }
+
+        .tools-list li {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            font-size: 1.1rem;
+        }
+
+        /* CTA Section */
+        section.cta {
+            background: #0066cc;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        section.cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        section.cta p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+
+        section.cta a {
+            background-color: #fff;
+            color: #0066cc;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        section.cta a:hover {
+            background-color: #00bfff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            section.about h2,
+            section.skills h2,
+            section.achievements h2,
+            section.tools h2 {
+                font-size: 2rem;
+            }
+
+            section.cta h2 {
+                font-size: 2rem;
+            }
+
+            .skills-list,
+            .tools-list {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            section.cta a {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>🚀 Experienced Software Engineer</h1>
-    <p>Python | Flask | Django | SQL | Cassandra | GitHub | Jira</p>
-  </header>
+    <!-- Header -->
+    <header>
+        <h1>Eshwar Pendyala</h1>
+        <p>Software Engineer | Python | Flask | Django | SQL | Cassandra | GitHub | Jira</p>
+    </header>
 
-  <!-- About Me Section -->
-  <section>
-    <h2>🔍 About Me</h2>
-    <p>Passionate and results-driven Software Engineer with 3 years of hands-on experience in Python and web development, specializing in Flask and Django frameworks. I thrive on turning complex challenges into elegant, user-friendly solutions. My expertise extends to database management with SQL and Cassandra, and I am well-versed in utilizing collaborative tools such as GitHub, GitLab, and Jira to enhance development workflows.</p>
-  </section>
+    <!-- About Section -->
+    <section class="about">
+        <h2>🔍 About Me</h2>
+        <p>Passionate and results-driven Software Engineer with 3 years of hands-on experience in Python and web development, specializing in Flask and Django frameworks. I thrive on turning complex challenges into elegant, user-friendly solutions. My expertise extends to database management with SQL and Cassandra, and I am well-versed in utilizing collaborative tools such as GitHub, GitLab, and Jira to enhance development workflows.</p>
+    </section>
 
-  <!-- Technical Skills Section -->
-  <section>
-    <h2>💻 Technical Skills</h2>
-    <ul class="skills">
-      <li>Python</li>
-      <li>Javascript</li>
-      <li>Flask</li>
-      <li>Django</li>
-      <li>SQL</li>
-      <li>Cassandra DB</li>
-      <li>GitHub</li>
-      <li>GitLab</li>
-      <li>Jira</li>
-    </ul>
-  </section>
+    <!-- Technical Skills Section -->
+    <section class="skills">
+        <h2>💻 Technical Skills</h2>
+        <ul class="skills-list">
+            <li>Python</li>
+            <li>Javascript</li>
+            <li>Flask</li>
+            <li>Django</li>
+            <li>SQL</li>
+            <li>Cassandra DB</li>
+            <li>GitHub</li>
+            <li>GitLab</li>
+            <li>Jira</li>
+        </ul>
+    </section>
 
-  <!-- Key Achievements Section -->
-  <section>
-    <h2>🛠️ Key Achievements</h2>
-    <ul>
-      <li>Successfully designed and implemented scalable web applications using Flask and Django, enhancing user experience and optimizing performance.</li>
-      <li>Proficient in database design, with a focus on SQL and Cassandra, ensuring robust data management and retrieval.</li>
-      <li>Collaborated with cross-functional teams using GitHub, GitLab, and Jira to streamline development processes, resulting in increased efficiency and code quality.</li>
-    </ul>
-  </section>
+    <!-- Key Achievements Section -->
+    <section class="achievements">
+        <h2>🛠️ Key Achievements</h2>
+        <ul>
+            <li>Successfully designed and implemented scalable web applications using Flask and Django, enhancing user experience and optimizing performance.</li>
+            <li>Proficient in database design, with a focus on SQL and Cassandra, ensuring robust data management and retrieval.</li>
+            <li>Collaborated with cross-functional teams using GitHub, GitLab, and Jira to streamline development processes, resulting in increased efficiency and code quality.</li>
+        </ul>
+    </section>
 
-  <!-- Tools & Methodologies Section -->
-  <section>
-    <h2>🔧 Tools & Methodologies</h2>
-    <ul class="tools">
-      <li>Git</li>
-      <li>Jira</li>
-      <li>Slack</li>
-      <li>Teams</li>
-      <li>Agile</li>
-      <li>Scrum</li>
-    </ul>
-  </section>
+    <!-- Tools & Methodologies Section -->
+    <section class="tools">
+        <h2>🔧 Tools & Methodologies</h2>
+        <ul class="tools-list">
+            <li>Git</li>
+            <li>Jira</li>
+            <li>Slack</li>
+            <li>Teams</li>
+            <li>Agile</li>
+            <li>Scrum</li>
+        </ul>
+    </section>
 
-  <!-- Passionate Coder Section -->
-  <section>
-    <h2>🚀 Passionate Coder</h2>
-    <p>I am deeply passionate about coding and problem-solving, constantly seeking opportunities to expand my knowledge and stay ahead in the ever-evolving tech landscape. My commitment to delivering high-quality software solutions is evident in my attention to detail and dedication to writing clean, maintainable code.</p>
-  </section>
+    <!-- CTA Section -->
+    <section class="cta">
+        <h2>📬 Let's Connect</h2>
+        <p>I'm always open to networking and discussing exciting opportunities in software development. Feel free to connect with me, and let's explore how we can collaborate to create innovative solutions!</p>
+        <a href="mailto:eshpend@gmail.com">Contact Me</a>
+    </section>
 
-  <!-- Call to Action Section -->
-  <section class="cta">
-    <h2>📬 Let's Connect</h2>
-    <p>I am always open to networking and discussing exciting opportunities in software development. Feel free to connect with me, and let's explore how we can collaborate to create innovative solutions!</p>
-    <a href="mailto:eshpend@gmail.com">Contact Me</a>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Eshwar Pendyala. All rights reserved.</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Eshwar Pendyala. All rights reserved. | <a href="https://www.linkedin.com/in/eshwarpendyala" target="_blank">LinkedIn</a> | <a href="https://github.com/eshwarpendyala" target="_blank">GitHub</a></p>
+    </footer>
 
 </body>
+
 </html>
