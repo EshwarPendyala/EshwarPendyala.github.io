@@ -9,6 +9,9 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <style>
         /* Reset and Global Styles */
         * {
@@ -19,14 +22,14 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
+            background-color: #000;
+            color: #fff;
             line-height: 1.6;
         }
 
         /* Header Section */
         header {
-            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            background: linear-gradient(45deg, #000, #fcd307);
             color: white;
             padding: 100px 20px;
             text-align: center;
@@ -65,7 +68,7 @@
 
         h2 {
             font-size: 2.5rem;
-            color: #1e3c72;
+            color: #fcd307;
             text-align: center;
             margin-bottom: 30px;
             font-weight: 600;
@@ -74,39 +77,40 @@
         p {
             font-size: 1.1rem;
             text-align: center;
-            color: #555;
+            color: #f1f1f1;
             margin-bottom: 30px;
         }
 
         /* About Section */
         section.about {
-            background-color: #fff;
+            background-color: #111;
             border-radius: 12px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
         /* Skills and Achievements Section */
         section.skills, section.achievements {
-            background-color: #e9f1fb;
+            background-color: #000;
             border-radius: 12px;
             margin-bottom: 50px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* Technical Skills List */
+        /* Technical Skills List with Icons */
         .skills-list, .achievements-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 30px;
         }
 
         .skills-list li, .achievements-list li {
-            background-color: #fff;
+            background-color: #222;
             padding: 20px;
             margin: 15px;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            width: 250px;
+            width: 200px;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -116,9 +120,15 @@
             box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
         }
 
+        .skills-list li i, .achievements-list li i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #fcd307;
+        }
+
         /* Tools Section */
         section.tools {
-            background-color: #fff;
+            background-color: #111;
             border-radius: 12px;
             padding: 40px;
             text-align: center;
@@ -131,8 +141,8 @@
         }
 
         .tools-list li {
-            background: #1e3c72;
-            color: #fff;
+            background: #fcd307;
+            color: #000;
             padding: 15px;
             border-radius: 8px;
             font-size: 1rem;
@@ -141,11 +151,18 @@
 
         .tools-list li:hover {
             transform: translateY(-8px);
+            background: #000;
+            color: #fcd307;
+        }
+
+        .tools-list li i {
+            font-size: 2rem;
+            margin-bottom: 10px;
         }
 
         /* Call-to-Action Section */
         section.cta {
-            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            background: linear-gradient(135deg, #fcd307, #ff6f00);
             color: white;
             padding: 80px 20px;
             text-align: center;
@@ -159,8 +176,8 @@
         }
 
         section.cta a {
-            background-color: white;
-            color: #2575fc;
+            background-color: black;
+            color: #fcd307;
             font-size: 1.2rem;
             padding: 15px 30px;
             border-radius: 30px;
@@ -169,14 +186,14 @@
         }
 
         section.cta a:hover {
-            background-color: #6a11cb;
-            color: white;
+            background-color: #fcd307;
+            color: black;
         }
 
         /* Footer */
         footer {
-            background-color: #2a5298;
-            color: white;
+            background-color: #222;
+            color: #fcd307;
             text-align: center;
             padding: 20px;
             margin-top: 50px;
@@ -184,7 +201,7 @@
         }
 
         footer a {
-            color: #fff;
+            color: #fcd307;
             text-decoration: none;
             font-weight: bold;
         }
@@ -239,15 +256,15 @@
     <section class="skills">
         <h2>💻 Technical Skills</h2>
         <ul class="skills-list">
-            <li>Python</li>
-            <li>Javascript</li>
-            <li>Flask</li>
-            <li>Django</li>
-            <li>SQL</li>
-            <li>Cassandra DB</li>
-            <li>GitHub</li>
-            <li>GitLab</li>
-            <li>Jira</li>
+            <li><i class="fab fa-python"></i><p>Python</p></li>
+            <li><i class="fab fa-js-square"></i><p>Javascript</p></li>
+            <li><i class="fab fa-flask"></i><p>Flask</p></li>
+            <li><i class="fab fa-docker"></i><p>Django</p></li>
+            <li><i class="fas fa-database"></i><p>SQL</p></li>
+            <li><i class="fas fa-database"></i><p>Cassandra DB</p></li>
+            <li><i class="fab fa-github"></i><p>GitHub</p></li>
+            <li><i class="fab fa-gitlab"></i><p>GitLab</p></li>
+            <li><i class="fab fa-jira"></i><p>Jira</p></li>
         </ul>
     </section>
 
@@ -265,12 +282,12 @@
     <section class="tools">
         <h2>🔧 Tools & Methodologies</h2>
         <ul class="tools-list">
-            <li>Git</li>
-            <li>Jira</li>
-            <li>Slack</li>
-            <li>Teams</li>
-            <li>Agile</li>
-            <li>Scrum</li>
+            <li><i class="fab fa-git"></i><p>Git</p></li>
+            <li><i class="fab fa-jira"></i><p>Jira</p></li>
+            <li><i class="fab fa-slack"></i><p>Slack</p></li>
+            <li><i class="fab fa-microsoft-teams"></i><p>Teams</p></li>
+            <li><i class="fas fa-cogs"></i><p>Agile</p></li>
+            <li><i class="fas fa-cogs"></i><p>Scrum</p></li>
         </ul>
     </section>
 
